@@ -16,9 +16,9 @@ def get_secret(secret_name):
 def home():
     secret = get_secret('app_secret')
     return jsonify({
-        "message" : "Hi from Application!!",
+        "message" : "Hi from Application 2.0!!",
         "secret" : secret,
-        "version" : "1.0"
+        "version" : "2.0"
     })
 
 @app.route('/health')
