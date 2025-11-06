@@ -87,7 +87,7 @@ devops-flask-demo/
 **Pull and Run:** 
 ```bash
 docker pull YOUR_DOCKERHUB_USERNAME/devops-flask-demo:latest
-docker run -p '<Your_machine_port>':5000 YOUR_USERNAME/devops-flask-demo:latest
+docker run -p LOCAL_PORT:5000 YOUR_USERNAME/devops-flask-demo:latest
 ```
 ---
 
