@@ -78,6 +78,16 @@ devops-flask-demo/
 - Multi-stage builds
 - Docker secrets
 
+## CI/CD Pipeline
+
+**Automated:** Push to main -> Build -> Push image to Dockerhub with following tags:
+    - 'latest': easy to access
+    - '<commit-sha>': specific version, easy to track
+
+**Pull and Run:** 
+```bash
+docker pull YOUR_DOCKERHUB_USERNAME/devops-flask-demo:latest
+docker run -p 5000:5000 YOUR_USERNAME/devops-flask-demo:latest
+```
 ---
 
-**Day 3 of ML Infrastructure Engineer Roadmap**
