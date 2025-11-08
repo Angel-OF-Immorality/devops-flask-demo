@@ -16,7 +16,7 @@ Production ready Flask app demonstrating DevOps best Practices
 
 
 ### 2. Docker Secrets Management
-- Secrets stored in `secrets/` directory (gitignored)
+- Secrets stored in `secrets/` directory (git-ignored)
 - Mounted as files in `/run/secrets/`
 - No hardcoded passwords in compose file
 - Supports both Docker secrets and env vars (for local dev)
@@ -44,6 +44,11 @@ echo "your-secret-here" > secrets/app_secret.txt
 
 # Build and run
 docker-compose up --build
+#The above docker-compose is built for production environment.
+#In real life ongoing projects 2 docker-compose files are made:
+#1. docker-compose.yml -> for production (base config)
+#2. docker-compose.dev.yml -> for development (hot-reload, linters,etc.)
+
 
 # Test endpoints
 curl http://localhost:5001        # Home endpoint
